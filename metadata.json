@@ -1,0 +1,6 @@
+{
+  "name": "Soloneto Saldanha Advocacia",
+  "description": "Site institucional da Soloneto Saldanha Advocacia — atuação em Direito Trabalhista, Direito Civil e Direito Previdenciário em São Paulo e atendimento digital em todo o Brasil.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
