@@ -16,16 +16,14 @@ export function Hero({ onConsultClick, onExplorePracticeClick }: HeroProps) {
       id="inicio"
       className="relative overflow-hidden bg-gradient-to-b from-[#111F35] via-[#14243D] to-[#14243D] pt-20 text-white lg:pt-24"
     >
-      {/* Profundidade atmosférica sutil em Marsala e Navy */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_72%_45%,rgba(73,29,48,0.42),transparent_60%)]"
       />
 
-      <div className="relative mx-auto max-w-7xl px-5 pb-12 pt-8 sm:px-6 lg:px-10 lg:pb-14 lg:pt-14">
-        {/* Composição principal: no mobile ordena Título -> Fotografia -> Texto/CTAs; no desktop exibe lado a lado */}
+      <div className="relative mx-auto max-w-7xl px-5 pb-10 pt-8 sm:px-6 lg:px-10 lg:pb-14 lg:pt-12">
         <div className="grid grid-cols-1 items-center gap-7 lg:grid-cols-12 lg:gap-10">
-          {/* Bloco 1: Kicker + Título principal em Cinzel Title Case */}
+          {/* Bloco 1: Kicker + Título */}
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
@@ -37,11 +35,11 @@ export function Hero({ onConsultClick, onExplorePracticeClick }: HeroProps) {
             </p>
 
             <h1 className="heading-hero mt-4 text-white">
-              Advocacia Pautada pelo Rigor Técnico, Clareza e Compromisso Ético.
+              Defesa e Orientação Jurídica com Rigor Técnico e Clareza.
             </h1>
           </motion.div>
 
-          {/* Bloco 2: Nova fotografia executiva 16:9 (1376x768) na proporção natural */}
+          {/* Bloco 2: Fotografia executiva 16:9 preservada */}
           <motion.div
             initial={{ opacity: 0, scale: 0.99 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -50,7 +48,6 @@ export function Hero({ onConsultClick, onExplorePracticeClick }: HeroProps) {
           >
             {!imageError ? (
               <div className="relative mx-auto w-full overflow-hidden">
-                {/* Proporção natural exata da imagem enviada (1376x768) sem cortes ou filtros escuros */}
                 <div className="relative aspect-[1376/768] w-full">
                   <img
                     src={FIRM_INFO.lawyerPhoto}
@@ -60,7 +57,6 @@ export function Hero({ onConsultClick, onExplorePracticeClick }: HeroProps) {
                     className="h-full w-full object-contain"
                   />
 
-                  {/* Fusão gradual apenas nas extremidades para integrar ao fundo Navy sem encobrir o advogado */}
                   <div
                     aria-hidden="true"
                     className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-gradient-to-r from-[#14243D] to-transparent sm:w-16"
@@ -79,13 +75,12 @@ export function Hero({ onConsultClick, onExplorePracticeClick }: HeroProps) {
                   />
                 </div>
 
-                {/* Assinatura editorial discreta abaixo do retrato, sem sobrepor a fotografia */}
                 <div className="mt-3 flex flex-wrap items-center justify-between gap-2 border-t border-[#C6A15B]/30 pt-3">
                   <p className="font-serif text-base font-medium tracking-[0.04em] text-white sm:text-lg">
                     {FIRM_INFO.lawyerName}
                   </p>
                   <p className="font-sans text-xs tracking-wide text-slate-300">
-                    {FIRM_INFO.name} <span aria-hidden="true">·</span> {FIRM_INFO.locationBase}
+                    {FIRM_INFO.name}
                   </p>
                 </div>
               </div>
@@ -95,25 +90,23 @@ export function Hero({ onConsultClick, onExplorePracticeClick }: HeroProps) {
                 <p className="mt-4 font-serif text-2xl font-medium text-white">
                   {FIRM_INFO.name}
                 </p>
-                <p className="mt-2 font-sans text-sm text-slate-300">{FIRM_INFO.locationBase}</p>
               </div>
             )}
           </motion.div>
 
-          {/* Bloco 3: Texto de apoio e botões de ação (abaixo da foto no mobile; abaixo do título no desktop) */}
+          {/* Bloco 3: Apoio objetivo + CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
             className="order-3 lg:col-span-5 lg:self-start"
           >
-            <p className="max-w-xl font-sans text-[15px] leading-[1.7] text-slate-200 sm:text-base">
-              Atuação dedicada em{' '}
+            <p className="max-w-lg font-sans text-[15px] leading-[1.7] text-slate-200 sm:text-base">
+              Atuação em{' '}
               <strong className="font-semibold text-white">
-                Direito Trabalhista, Direito Civil e Direito Previdenciário
+                Direito Trabalhista, Civil e Previdenciário
               </strong>
-              , com análise individualizada de cada caso e comunicação transparente em todas as
-              etapas.
+              , com análise técnica individualizada e atendimento em São Paulo e em todo o Brasil.
             </p>
 
             <div className="mt-7 flex flex-col gap-3.5 sm:flex-row sm:items-center">
@@ -136,33 +129,8 @@ export function Hero({ onConsultClick, onExplorePracticeClick }: HeroProps) {
             </div>
           </motion.div>
         </div>
-
-        {/* Faixa inferior contínua de síntese institucional */}
-        <div className="mt-10 grid grid-cols-1 gap-5 border-t border-white/15 pt-6 font-sans text-xs text-slate-300 sm:grid-cols-3 sm:gap-8 lg:mt-14 lg:pt-8">
-          <div>
-            <p className="font-semibold tracking-wider text-[#C6A15B] uppercase">
-              Áreas de Atuação
-            </p>
-            <p className="mt-1.5 text-sm leading-relaxed text-slate-200">
-              Direito Trabalhista, Civil e Previdenciário
-            </p>
-          </div>
-          <div>
-            <p className="font-semibold tracking-wider text-[#C6A15B] uppercase">Atendimento</p>
-            <p className="mt-1.5 text-sm leading-relaxed text-slate-200">
-              São Paulo – SP e atendimento digital em todo o Brasil
-            </p>
-          </div>
-          <div>
-            <p className="font-semibold tracking-wider text-[#C6A15B] uppercase">Canal Direto</p>
-            <p className="mt-1.5 tabular-nums text-sm leading-relaxed text-slate-200">
-              WhatsApp {FIRM_INFO.whatsappDisplay}
-            </p>
-          </div>
-        </div>
       </div>
 
-      {/* Transição suave para a próxima faixa clara editorial */}
       <div
         aria-hidden="true"
         className="h-px w-full bg-gradient-to-r from-transparent via-[#C6A15B]/40 to-transparent"
