@@ -23,19 +23,20 @@ export function Hero({ onConsultClick, onExplorePracticeClick }: HeroProps) {
 
       <div className="relative mx-auto max-w-7xl px-5 pb-10 pt-8 sm:px-6 lg:px-10 lg:pb-14 lg:pt-12">
         <div className="grid grid-cols-1 items-center gap-7 lg:grid-cols-12 lg:gap-10">
-          {/* Bloco 1: Kicker + Título */}
+          {/* Bloco 1: Posicionamento estratégico */}
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
             className="order-1 lg:col-span-5 lg:self-end"
           >
-            <p className="font-sans text-xs font-medium tracking-[0.16em] text-[#C6A15B] uppercase">
-              {FIRM_INFO.locationBase} <span aria-hidden="true">·</span> Atendimento Digital Nacional
+            <p className="font-sans text-xs font-semibold tracking-[0.16em] text-[#C6A15B] uppercase">
+              Direito Trabalhista <span aria-hidden="true">·</span> Civil{' '}
+              <span aria-hidden="true">·</span> Previdenciário
             </p>
 
-            <h1 className="heading-hero mt-4 text-white">
-              Defesa e Orientação Jurídica com Rigor Técnico e Clareza.
+            <h1 className="heading-hero mt-3.5 text-white">
+              Advocacia Estratégica com Rigor Técnico e Clareza.
             </h1>
           </motion.div>
 
@@ -80,7 +81,7 @@ export function Hero({ onConsultClick, onExplorePracticeClick }: HeroProps) {
                     {FIRM_INFO.lawyerName}
                   </p>
                   <p className="font-sans text-xs tracking-wide text-slate-300">
-                    {FIRM_INFO.name}
+                    {FIRM_INFO.locationBase} <span aria-hidden="true">·</span> Atendimento Nacional
                   </p>
                 </div>
               </div>
@@ -94,37 +95,34 @@ export function Hero({ onConsultClick, onExplorePracticeClick }: HeroProps) {
             )}
           </motion.div>
 
-          {/* Bloco 3: Apoio objetivo + CTAs */}
+          {/* Bloco 3: Proposta de valor em 1 frase e CTAs diretos */}
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
             className="order-3 lg:col-span-5 lg:self-start"
           >
-            <p className="max-w-lg font-sans text-[15px] leading-[1.7] text-slate-200 sm:text-base">
-              Atuação em{' '}
-              <strong className="font-semibold text-white">
-                Direito Trabalhista, Civil e Previdenciário
-              </strong>
-              , com análise técnica individualizada e atendimento em São Paulo e em todo o Brasil.
+            <p className="max-w-md font-sans text-[15px] leading-[1.65] text-slate-200 sm:text-base">
+              Orientação direta e defesa técnica dos seus direitos, com atendimento presencial em
+              São Paulo e digital em todo o Brasil.
             </p>
 
-            <div className="mt-7 flex flex-col gap-3.5 sm:flex-row sm:items-center">
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
               <button
                 type="button"
                 onClick={onConsultClick}
-                className="inline-flex min-h-[48px] w-full items-center justify-center gap-2.5 bg-[#C6A15B] px-6 py-3.5 font-sans text-sm font-semibold tracking-wide text-[#14243D] transition-colors duration-200 hover:bg-[#D4B577] sm:w-auto cursor-pointer whitespace-nowrap"
+                className="inline-flex min-h-[48px] w-full items-center justify-center gap-2 bg-[#C6A15B] px-6 py-3 font-sans text-sm font-semibold tracking-wide text-[#14243D] transition-colors duration-200 hover:bg-[#D4B577] sm:w-auto cursor-pointer whitespace-nowrap"
               >
-                <span>Fale com o Advogado</span>
+                <span>Falar com o Advogado</span>
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </button>
 
               <button
                 type="button"
                 onClick={onExplorePracticeClick}
-                className="inline-flex min-h-[48px] w-full items-center justify-center border border-white/30 bg-transparent px-6 py-3.5 font-sans text-sm font-medium tracking-wide text-white transition-colors duration-200 hover:border-[#C6A15B] hover:text-[#C6A15B] sm:w-auto cursor-pointer whitespace-nowrap"
+                className="inline-flex min-h-[48px] w-full items-center justify-center border border-white/30 bg-transparent px-6 py-3 font-sans text-sm font-medium tracking-wide text-white transition-colors duration-200 hover:border-[#C6A15B] hover:text-[#C6A15B] sm:w-auto cursor-pointer whitespace-nowrap"
               >
-                Conheça Nossa Atuação
+                Áreas de Atuação
               </button>
             </div>
           </motion.div>
