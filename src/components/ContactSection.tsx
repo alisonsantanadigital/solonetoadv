@@ -3,6 +3,7 @@ import {
   Check,
   Copy,
   ExternalLink,
+  Instagram,
   Loader2,
   Mail,
   MapPin,
@@ -149,6 +150,20 @@ export function ContactSection({ preselectedArea, onOpenPrivacy }: ContactSectio
                   <Phone className="h-4 w-4 shrink-0 text-[#C6A15B]" aria-hidden="true" />
                   <dd className="tabular-nums font-medium text-white">
                     {FIRM_INFO.whatsappDisplay}
+                  </dd>
+                </div>
+
+                <div className="flex items-center gap-3.5">
+                  <Instagram className="h-4 w-4 shrink-0 text-[#C6A15B]" aria-hidden="true" />
+                  <dd>
+                    <a
+                      href={FIRM_INFO.instagramUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-medium text-slate-200 transition-colors hover:text-[#C6A15B]"
+                    >
+                      {FIRM_INFO.instagramHandle}
+                    </a>
                   </dd>
                 </div>
 

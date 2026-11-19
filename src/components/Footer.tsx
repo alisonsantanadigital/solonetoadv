@@ -1,3 +1,4 @@
+import { Instagram } from 'lucide-react';
 import { FIRM_INFO, PracticeAreaId } from '../data/firmContent';
 
 interface FooterProps {
@@ -91,6 +92,17 @@ export function Footer({
             </p>
             <ul className="mt-3 space-y-2 text-sm text-slate-300">
               <li className="tabular-nums">{FIRM_INFO.whatsappDisplay}</li>
+              <li>
+                <a
+                  href={FIRM_INFO.instagramUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 transition-colors hover:text-[#C6A15B]"
+                >
+                  <Instagram className="h-4 w-4 text-[#C6A15B]" aria-hidden="true" />
+                  <span>{FIRM_INFO.instagramHandle}</span>
+                </a>
+              </li>
               <li className="break-all text-slate-400">{FIRM_INFO.emailPlaceholder}</li>
               <li className="text-xs text-slate-400">Atendimento Digital Nacional</li>
             </ul>

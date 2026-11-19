@@ -71,6 +71,7 @@ export function applyRouteSeo({ title, description, path, type = 'website', arti
     name: FIRM_INFO.name,
     url: origin,
     telephone: FIRM_INFO.whatsappDisplay,
+    sameAs: [FIRM_INFO.instagramUrl],
     areaServed: [
       {
         '@type': 'City',

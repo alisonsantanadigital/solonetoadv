@@ -53,6 +53,8 @@ export const FIRM_INFO = {
   whatsappDisplay: '+55 11 96933-5179',
   whatsappDigits: '5511969335179',
   phoneDisplay: '(11) 96933-5179',
+  instagramHandle: '@solonetosaldanha.adv',
+  instagramUrl: 'https://www.instagram.com/solonetosaldanha.adv/',
   emailPlaceholder: 'contato@solonetosaldanha.adv.br',
   emailNote: 'E-mail editável conforme domínio oficial.',
   oabPlaceholder: 'OAB/SP — Registro a confirmar',
